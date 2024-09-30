@@ -464,7 +464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseInput: {x: 0, y: 0}
   sensibility: 5
-  smooth: 2
+  smooth: 1
   player: {fileID: 0}
 --- !u!1 &1181442940
 GameObject:
@@ -757,6 +757,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2919031136865010077, guid: 53936056cf486344d8bf9496ac753994, type: 3}
+      propertyPath: Health
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2585504483219627631, guid: 53936056cf486344d8bf9496ac753994, type: 3}
       propertyPath: m_Name
       value: Enemy (3)
@@ -928,6 +932,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2919031136865010077, guid: 53936056cf486344d8bf9496ac753994, type: 3}
+      propertyPath: Health
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2585504483219627631, guid: 53936056cf486344d8bf9496ac753994, type: 3}
       propertyPath: m_Name
       value: Enemy

@@ -4,24 +4,29 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // Start is called before the first frame update
+    public int Health;
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Bullet")) 
+        int receivedaDamage = collision.gameObject.GetComponent<Bullet>().damage;
+        if (collision.gameObject.CompareTag("Bullet"))
         {
+            Debug.Log("pego");
             Destroy(collision.gameObject);
-            Destroy(gameObject);     
+    
+
+            Health -= receivedaDamage;
+
+            if (Health <= 0)
+            {
+                Debug.Log("muere");
+                Destroy(collision.gameObject); 
+            }
         }
 
     }
+
+    
 }
