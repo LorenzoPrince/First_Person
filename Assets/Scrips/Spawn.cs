@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    public float bulletForce;
-    public GameObject objectPrefab;
+    [SerializeField] private float bulletForce; //es para que sea privado pero se siga viendo en el inspector y editarlo, pero no podes editarlo en otro script. 
+    [SerializeField] private GameObject objectPrefab;
     public Vector3 spawnPosition;
     // Start is called before the first frame update
     void Start()
@@ -26,5 +26,7 @@ public class Spawn : MonoBehaviour
 
             Destroy(bulletClone, 2f);
         }
+
+
     }
 }

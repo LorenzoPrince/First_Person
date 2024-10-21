@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
         imputVector.y = Input.GetAxis("Vertical");
 
 
-        rigidBody.AddForce(imputVector.x * speed, 0f, imputVector.y * speed, ForceMode.Impulse);
+        rigidBody.AddRelativeForce(imputVector.x * speed, 0f, imputVector.y * speed, ForceMode.Impulse); // usar relative force para que detecte el eje propio no el del mundo.
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded) 
         {
