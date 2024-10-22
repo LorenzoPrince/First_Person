@@ -6,6 +6,7 @@ TagManager:
   tags:
   - pizo
   - Bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX
