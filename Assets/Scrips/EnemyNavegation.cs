@@ -7,14 +7,14 @@ public class EnemyNavegation : MonoBehaviour
 {
     public NavMeshAgent agent;
     public Transform player;
-    public float initialDelay;
-    public float interval;
+    public float initialDelay; //tiemmpo para que inicie
+    public float interval; //cada cuanto chequea a donde ir
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        InvokeRepeating("SetDestination", 2f, 1f); //me permite llamar a un meto dentro de un tiempo metodo de la clase. Si pongo repeting puedo agregar tambien cada cuanto se tiene que repetir.
+        InvokeRepeating("SetDestination", initialDelay, interval); //me permite llamar a un meto dentro de un tiempo metodo de la clase. Si pongo repeting puedo agregar tambien cada cuanto se tiene que repetir.
 
     }
 
