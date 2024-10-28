@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public bool isGrounded;
     public Collision contraLoQueChoque;
     public Rigidbody rigidBody;
-
+    [SerializeField] Gameover Menu;
     void Start()
     {
         Debug.Log("el juego a inciado");
@@ -42,6 +42,11 @@ public class Player : MonoBehaviour
         if (contraLoQueChoque.gameObject.CompareTag("pizo"))
         {
             isGrounded = true;
+        }
+        if (contraLoQueChoque.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("kill you");
+            Menu.ActiveScreenLose(); //activa del otro script la funcion 
         }
     }
 }

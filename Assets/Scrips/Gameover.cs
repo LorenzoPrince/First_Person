@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; //aunque no use scenas es importante para pausarlo.
 using UnityEngine.UI;
-public class GameOver : MonoBehaviour
+public class Gameover : MonoBehaviour
 {
     // Start is called before the first frame update
 
@@ -15,16 +15,15 @@ public class GameOver : MonoBehaviour
     public void ActiveScreenLose()
     {
         Lose.SetActive(true);
-        Time.timeScale = 0f;
-
+        Time.timeScale = 0f; // Detiene el tiempo
+        StartCoroutine(RestartAfterDelay(3f)); // Llama a la coroutine para reiniciar después de 5 segundos
     }
 
-    public void Restart()
+    private IEnumerator RestartAfterDelay(float delay)
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //obtiene la scena que esta activa actualmente y la reinicia.
-    }              //recarga la scena                        // detecta la scene
-
-    // Update is called once per frame
-
+        Debug.Log("Esperando para reiniciar...");
+        yield return new WaitForSeconds(delay); // Espera el tiempo especificado
+        Time.timeScale = 1; // Reanuda el tiempo
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reinicia la escena
+    }
 }
