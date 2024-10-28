@@ -5,8 +5,8 @@ using UnityEngine.AI;
 
 public class EnemyNavegation : MonoBehaviour
 {
-    public NavMeshAgent agent;
-    public Transform player;
+    public NavMeshAgent agent;// Componente que controla el movimiento del enemigo
+    public Transform player;// Transform del jugador al que el enemigo seguirá
     public float initialDelay; //tiemmpo para que inicie
     public float interval; //cada cuanto chequea a donde ir
     // Start is called before the first frame update
