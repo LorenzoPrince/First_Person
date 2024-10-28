@@ -22,8 +22,9 @@ public class Gameover : MonoBehaviour
     private IEnumerator RestartAfterDelay(float delay)
     {
         Debug.Log("Esperando para reiniciar...");
-        yield return new WaitForSeconds(delay); // Espera el tiempo especificado
-        Time.timeScale = 1; // Reanuda el tiempo
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reinicia la escena
+        yield return new WaitForSecondsRealtime(delay); // Espera el tiempo especificado
+        Debug.Log(" reiniciar...");
+        Time.timeScale = 1f; // Reanuda el tiempo
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);  // Reinicia la escena
     }
 }

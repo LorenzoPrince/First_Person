@@ -753,8 +753,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7708008976132223258, guid: eb87efcdf7214fd47af2adb86fd644fa, type: 3}
+      propertyPath: Menu
+      value: 
+      objectReference: {fileID: 1063332286}
+    - target: {fileID: 7708008976132223258, guid: eb87efcdf7214fd47af2adb86fd644fa, type: 3}
       propertyPath: speed
-      value: 0.6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7708008976132223258, guid: eb87efcdf7214fd47af2adb86fd644fa, type: 3}
       propertyPath: Jumpforce
@@ -1198,7 +1202,7 @@ MonoBehaviour:
   winText: {fileID: 1092949612}
   Round: {fileID: 61018579}
   enemyPrefab: {fileID: 2585504483219627631, guid: 53936056cf486344d8bf9496ac753994, type: 3}
-  spawnPoint: {fileID: 0}
+  spawnPoint: {fileID: 423441177}
 --- !u!4 &899368720
 Transform:
   m_ObjectHideFlags: 0
