@@ -11,29 +11,11 @@ public class doorAnimationControler : MonoBehaviour
         doorAnimator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.C)) 
-        {
-            CloseDoor();
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            OpenDoor();
-        }
-    }
-    public void OpenDoor()
-    {
-        doorAnimator.SetBool("Open", true);
-    }
-    public void CloseDoor()
-    {
-        doorAnimator.SetBool("Open", false);
-    }
+
     public void SwitchDoor(bool State)
     {
-
+        doorAnimator.SetBool("Open",State); // codigo mas limpio queda que hacer uno de open y otro de closet
+    
     }
     private void OnTriggerEnter(Collider other)
     {
