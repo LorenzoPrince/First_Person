@@ -41,8 +41,10 @@ public class GameController : MonoBehaviour
         {
             if (round == 3)
             {
-                win();
-                return;
+                Restart();
+
+
+
             }
             nextWave();
 
@@ -53,12 +55,19 @@ public class GameController : MonoBehaviour
     {
         killText.text = kills.ToString() + " / " + TotalEenemy.ToString();
     }
+
     private void win()
     {
         winText.enabled = true;
         Time.timeScale = 0;
         Round.enabled = false;
+ 
 
+    }
+    private void Restart()
+    {
+
+        SceneManager.LoadScene("Win"); 
     }
     private void nextWave()
     {
