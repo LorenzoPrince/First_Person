@@ -66,7 +66,8 @@ public class GameController : MonoBehaviour
     }
     private void Restart()
     {
-
+        Cursor.lockState = CursorLockMode.None;  // Desbloquea el cursor
+        Cursor.visible = true;
         SceneManager.LoadScene("Win"); 
     }
     private void nextWave()
