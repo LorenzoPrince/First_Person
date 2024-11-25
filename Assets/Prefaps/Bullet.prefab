@@ -146,4 +146,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf38f5199392954e95c771d3c3cb80d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitVFXprefab: {fileID: 3059114705392426654, guid: 4cc7d82241377cf43a4ab7a9168486a8, type: 3}
   damage: 25

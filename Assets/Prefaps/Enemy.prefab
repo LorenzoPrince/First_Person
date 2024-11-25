@@ -241,6 +241,7 @@ MonoBehaviour:
   Health: 100
   enemyHealthUI: {fileID: 6078836195449970704}
   gameController: {fileID: 0}
+  hitVFXprefab: {fileID: 3059114705392426654, guid: 4cc7d82241377cf43a4ab7a9168486a8, type: 3}
 --- !u!195 &1822279472407233544
 NavMeshAgent:
   m_ObjectHideFlags: 0
