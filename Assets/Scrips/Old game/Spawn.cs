@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Spawn : MonoBehaviour
@@ -30,7 +31,9 @@ public class Spawn : MonoBehaviour
             // Instanciar el efecto de partículas en la misma posición del disparo
             Destroy(shootVFXClone, 0.5f);
             Destroy(bulletClone, 2f);
+
         }
+        private void OnCollisionEnter(Collision contraLoQueChoque)
 
 
     }
