@@ -12,12 +12,10 @@ public class Player : MonoBehaviour
     public bool isGrounded;
     public Collision contraLoQueChoque;
     public Rigidbody rigidBody;
-<<<<<<< Updated upstream:Assets/Scrips/Old game/Player.cs
-    [SerializeField] Gameover Menu;
-=======
 
-    [SerializeField] Gameover Menu; //hago referencia al anterior script
->>>>>>> Stashed changes:Assets/Scrips/Player.cs
+    [SerializeField] Gameover Menu;
+
+
     void Start()
     {
         Debug.Log("el juego a inciado");
@@ -53,9 +51,6 @@ public class Player : MonoBehaviour
             Debug.Log("kill you");
             Menu.ActiveScreenLose(); //activa del otro script la funcion 
         }
-<<<<<<< Updated upstream:Assets/Scrips/Old game/Player.cs
-=======
 
->>>>>>> Stashed changes:Assets/Scrips/Player.cs
     }
 }

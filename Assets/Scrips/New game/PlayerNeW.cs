@@ -18,6 +18,7 @@ public class PlayerNew : MonoBehaviour
     private AudioSource audioSource;
     private Coroutine corutine;
     private bool caminando;
+
     void Start()
     {
         Debug.Log("el juego a inciado");
@@ -83,6 +84,14 @@ public class PlayerNew : MonoBehaviour
             //Menu.ActiveScreenLose(); //activa del otro script la funcion  lo saco ya que era del anterior juego
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Final"))
+        {
+            // Cambiar de escena, reemplaza "SceneName" con el nombre de tu escena
+            Invoke("scene", 2f);
+        }
+    }
     IEnumerator pisadas() // hago corrutina
     {
         while(true) //bucle
@@ -91,5 +100,9 @@ public class PlayerNew : MonoBehaviour
             audioSource.Play();
         }
 
+    }
+    private void scene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
     }
 }

@@ -7,6 +7,8 @@ TagManager:
   - pizo
   - Bullet
   - Enemy
+  - FxTemporaire
+  - Final
   layers:
   - Default
   - TransparentFX
