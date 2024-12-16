@@ -67,6 +67,8 @@ public class NoteFinish : MonoBehaviour
             active = false;
             NoteCube.SetActive(false); // hace si se aleja desaparece la nota de la camara
             PressE.SetActive(false); // Desactivamos la indicación de presionar E cuando el jugador ya no está cerca
+
+            Instantiate(monster, spawnMonster.position, Quaternion.identity);
         }
     }
     
