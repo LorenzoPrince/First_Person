@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     public int Health;
     public TextMeshProUGUI enemyHealthUI; // permitimos arrastar el texto para que se refiea enemy... al texto.
-    public GameController gameController;
+    public GameController gameController; // detecta cual es el jugador
     public GameObject hitVFXprefab;  // Prefab de partículas para el impacto
     private void Start()
     {
@@ -38,7 +38,11 @@ public class Enemy : MonoBehaviour
             if (Health <= 0)
             {
                 Debug.Log("muere");
+<<<<<<< Updated upstream
                // gameController.addKill(); //la llamo del otro script de gamecontroller
+=======
+                //gameController.addKill(); //la llamo del otro script de gamecontroller esto lo usaba antes para hacer el contador de kill
+>>>>>>> Stashed changes
                 Destroy(gameObject); 
             }
         }
