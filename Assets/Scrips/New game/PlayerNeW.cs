@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerNew : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class PlayerNew : MonoBehaviour
     private AudioSource audioSource;
     private Coroutine corutine;
     private bool caminando;
+    public Animator animator;
+    public bool desvanecerseActivo = false;
 
     void Start()
     {
@@ -81,7 +84,9 @@ public class PlayerNew : MonoBehaviour
         if (contraLoQueChoque.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("kill you");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Map");
+            desvanece();
+            Invoke("recargar", 3f);
+
             //Menu.ActiveScreenLose(); //activa del otro script la funcion  lo saco ya que era del anterior juego
         }
     }
@@ -90,7 +95,7 @@ public class PlayerNew : MonoBehaviour
         if (other.CompareTag("Final"))
         {
             // Cambiar de escena, reemplaza "SceneName" con el nombre de tu escena
-            Invoke("scene", 2f);
+
         }
     }
     IEnumerator pisadas() // hago corrutina
@@ -102,8 +107,18 @@ public class PlayerNew : MonoBehaviour
         }
 
     }
-    private void scene()
+    private void scenefinal()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+    }
+    private void recargar()
+    {
+        Debug.Log("recarga");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void desvanece()
+    {
+        Debug.Log("Activando animación de desvanecerse...");
+        animator.SetBool("Desvanece", true);  // Activamos el bool en el Animato 
     }
 }
