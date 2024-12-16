@@ -9,12 +9,14 @@ public class Spawn : MonoBehaviour
     [SerializeField] private GameObject objectPrefab;
     [SerializeField] private GameObject shootVFXPrefab; // Prefab de las partículas del disparo
     public Vector3 spawnPosition;
+    private AudioSource audioSource;
 
 
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -23,12 +25,14 @@ public class Spawn : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) ) //hago referencia a script notas
         {
+            audioSource.Play();
             weapon();
         }
     }
     [SerializeField] void weapon()
     {
         Cursor.visible = false;
+
         GameObject bulletClone = Instantiate(objectPrefab, transform.position, transform.rotation); // el quaternion. identity es para que sea en la misma posicion que el vector . y el vector que esta el spawn
 
 
