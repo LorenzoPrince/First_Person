@@ -94,6 +94,7 @@ public class PlayerNew : MonoBehaviour
     {
         if (other.CompareTag("Final"))
         {
+            Invoke("scenefinal", 2f);
             // Cambiar de escena, reemplaza "SceneName" con el nombre de tu escena
 
         }
@@ -109,7 +110,7 @@ public class PlayerNew : MonoBehaviour
     }
     private void scenefinal()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MenuFinal");
     }
     private void recargar()
     {
