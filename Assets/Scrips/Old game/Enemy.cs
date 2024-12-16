@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         UpdateUI();
-        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+        //gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -38,11 +38,8 @@ public class Enemy : MonoBehaviour
             if (Health <= 0)
             {
                 Debug.Log("muere");
-<<<<<<< Updated upstream
-               // gameController.addKill(); //la llamo del otro script de gamecontroller
-=======
-                //gameController.addKill(); //la llamo del otro script de gamecontroller esto lo usaba antes para hacer el contador de kill
->>>>>>> Stashed changes
+
+                //gameController.addKill(); la llamo del otro script de gamecontroller esto lo usaba antes para hacer el contador de kill
                 Destroy(gameObject); 
             }
         }

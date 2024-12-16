@@ -80,7 +80,7 @@ public class PlayerNew : MonoBehaviour
         if (contraLoQueChoque.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("kill you");
-            Menu.ActiveScreenLose(); //activa del otro script la funcion 
+            //Menu.ActiveScreenLose(); //activa del otro script la funcion  lo saco ya que era del anterior juego
         }
     }
     IEnumerator pisadas() // hago corrutina
