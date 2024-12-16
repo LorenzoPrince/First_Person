@@ -69,6 +69,7 @@ public class PlayerNew : MonoBehaviour
         }
 
     }
+
     private void OnCollisionEnter(Collision contraLoQueChoque)//metedo de unity para detectar collisiones
     {
         Debug.Log("choque contra " + contraLoQueChoque.gameObject.name);
