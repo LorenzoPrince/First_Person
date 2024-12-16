@@ -59,7 +59,7 @@ public class GameController : MonoBehaviour
     private void win()
     {
         winText.enabled = true;
-        Time.timeScale = 0;
+
         Round.enabled = false;
  
 
