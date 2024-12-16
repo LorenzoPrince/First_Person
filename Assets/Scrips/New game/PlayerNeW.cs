@@ -81,6 +81,7 @@ public class PlayerNew : MonoBehaviour
         if (contraLoQueChoque.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("kill you");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Map");
             //Menu.ActiveScreenLose(); //activa del otro script la funcion  lo saco ya que era del anterior juego
         }
     }
