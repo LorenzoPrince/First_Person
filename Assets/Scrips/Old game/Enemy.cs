@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
             if (Health <= 0)
             {
                 Debug.Log("muere");
-                gameController.addKill(); //la llamo del otro script de gamecontroller
+               // gameController.addKill(); //la llamo del otro script de gamecontroller
                 Destroy(gameObject); 
             }
         }
